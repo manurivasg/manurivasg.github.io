@@ -76,10 +76,11 @@
 
 button{
     width: 200px;
+    border-collapse: separate; 
+    border-radius: 30px;
     padding: 15px 0;
     text-align: center;
     margin: 20px 10px;
-    border-radius: 30px;
     font-weight: bold;
     border: 2px solid aqua;
     background: transparent;
@@ -91,6 +92,7 @@ button{
 
 span{
     background: aqua;
+    border-radius: 30px;
     width: 0;
     height: 100%;
     position: absolute;
