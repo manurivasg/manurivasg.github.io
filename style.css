@@ -63,6 +63,16 @@
     color: white;
 }
 
+.team{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    background-color: blueviolet;
+}
+
 .content h1{
     font-size: 70px;
     margin-top: 80px;
