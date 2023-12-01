@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas del hospital</title>
+    <link rel="stylesheet" href="/static/MedignosisT.css">
+    <link rel="icon" href="/static/logo negro.png">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">
+                Estadísticas del hospital
+            </h1>
+            <p id="description">
+                Seleccione la característica del hospital que desea observar
+            </p>
+        </header>
+        <form action="" method="POST" id="cuestionario">
+            <div class="form-group">
+                <p id="act">¿Qué categoría de datos desea observar?</p>
+                <select name="act" id="dropdown" class="formControl" required>
+                    <option value="" disabled selected>Seleccione una característica</option>
+                    <option value="UCI">UCI</option>
+                    <option value="Admitidos">Admitidos</option>
+                    <option value="Antiguos">Antiguos</option>
+                    <option value="Registrados activos">Regisrados Activos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn">EJECUTAR</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

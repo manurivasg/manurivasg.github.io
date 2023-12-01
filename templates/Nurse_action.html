@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar paciente</title>
+    <link rel="stylesheet" href="/static/MedignosisT.css">
+    <link rel="icon" href="/static/logo negro.png">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">
+                 Modificar paciente
+            </h1>
+            <p id="description">
+                Ingrese el documento de identidad del paciente 
+            </p>
+        </header>
+        <form action="" method="POST" id="cuestionario">
+            
+            <div class="form-group">
+                <label for="Documento de Identidad">Documento de Identidad </label>
+                <input type="number" name="DI" id="DI" class="formControl"  min="0"
+                placeholder="Ingrese el documento de identidad del paciente" required>
+            </div>
+            
+            <div class="form-group">
+                <p id="act">¿Qué acción desea llevar a sabo sobre el paciente?</p>
+                <select name="act" id="dropdown" class="formControl" required>
+                    <option value="" disabled selected>Seleccione una acción</option>
+                    <option value="Eliminar paciente">Eliminar paciente</option>
+                    <option value="Buscar paciente">Buscar paciente</option>
+                    <option value="Dar de alta a paciente">Dar de alta a paciente</option>
+                    <option value="Entrar paciente a UCI">Entrar paciente a UCI</option>
+                    <option value="Sacar paciente de UCI">Sacar paciente de UCI</option>
+                    <option value="Admitir paciente">Admitir paciente</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn">EJECUTAR</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

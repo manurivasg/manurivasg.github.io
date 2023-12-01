@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario caraterización triage</title>
+    <link rel="stylesheet" href="/static/MedignosisT.css">
+    <link rel="icon" href="/static/logo negro.png">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">
+                Cuestionario de caraterización del paciente: triage
+            </h1>
+            <p id="description">
+                En este cuestionario se le realizarán una serie de preguntas
+                con el fin de determinar su categoría de triage 
+                y así poder determinar el nivel de gravedad de la urgencia para el posterior
+                chequeo de ingreso realizado por una de nuestras enfermeras.
+            </p>
+        </header>
+        <form action="" method="POST" id="cuestionario">
+            <div id="form-group">
+                <label for="Nombre">Nombre </label>
+                <input type="text" name="Nombre" id="Nombre" class="formControl"
+                placeholder="Ingrese el nombre del paciente" required>
+            </div>
+            <div class="form-group">
+                <label for="Documento de Identidad">Documento de Identidad </label>
+                <input type="number" name="DI" id="DI" class="formControl" min="0"
+                placeholder="Ingrese el documento de identidad del paciente" required>
+            </div>
+            <div class="form-group">
+                <label for="Edad">Edad </label>
+                <input type="number" name="Edad" id="Edad" class="formControl" min="0"
+                placeholder="Ingrese la edad del paciente" required>
+            </div>
+            <div class="form-group">
+                <p id="sexo">Sexo del paciente </p>
+                <label for="">
+                    <input type="radio" name="Sexo" value="Mujer" class="inputRadio" checked>Mujer
+                </label>
+                <label for="">
+                    <input type="radio" name="Sexo" value="Hombre" class="inputRadio">Hombre
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="Motivo de consulta">Motivo de consulta </label>
+                <input type="text" name="MC" id="Motivo de consulta" class="formControl"
+                placeholder="Ingrese el motivo de consulta del paciente" required>
+            </div>
+            <div class="form-group">
+                <p id="transport">¿En que medio de 
+                transporte llegó el paciente al 
+                hospital?</p>
+                <select name="transport" id="dropdown" class="formControl" required>
+                    <option value="" disabled selected>Seleccione un medio 
+                    de transporte</option>
+                    <option value="Caminando">Caminando</option>
+                    <option value="Ambulancia pública">Ambulancia pública</option>
+                    <option value="Carro particular">Carro particular</option>
+                    <option value="Ambulancia privada">Ambulancia privada</option>
+                    <option value="Transporte público (policia)">Transporte público (policia)</option>
+                    <option value="Silla de ruedas">Silla de ruedas</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p id="mental">Estado mental del paciente</p>
+                <select name="mental" id="dropdown" class="formControl" required>
+                    <option value="" disabled selected>Seleccione el estado mental
+                        en que llegó el paciente</option>
+                    <option value="Alerta">Alerta</option>
+                    <option value="Responde a estímulos verbales">Responde a estímulos verbales</option>
+                    <option value="Responde a estímulos de dolor">Responde a estímulos de dolor</option>
+                    <option value="No responde">No responde</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p id="sexo">¿El paciente está herido?</p>
+                <label for="">
+                    <input type="radio" name="hurt" value="Si" class="inputRadio" checked>Si
+                </label>
+                <label for="">
+                    <input type="radio" name="hurt" value="No" class="inputRadio">No
+                </label>
+            </div>
+            <div class="form-group">
+                <p id="sexo">¿El paciente está experimentando dolor?</p>
+                <label for="">
+                    <input type="radio" name="hurt-f" value="Si" class="inputRadio" checked>Si
+                </label>
+                <label for="">
+                    <input type="radio" name="hurt-f" value="No" class="inputRadio">No
+                </label>
+            </div>
+            <div class="form-group">
+                <p id="hurt-s">Del 1-10 siendo 10 la mayor sensación de dolor y 1 la menor, 
+                    ¿Cuánto dolor está sintiendo el paciente en este momento?</p>
+                <select name="hurt-s" id="dropdown" class="formControl" required>
+                    <option value="" disabled selected>Seleccione un número en la escala de dolor</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="HR">Frecuenia cardíaca </label>
+                <input type="number" name="HR" id="HR" class="formControl" min="0"
+                placeholder="Ingrese la frecuencia cardíaca del paciente" required>
+            </div>
+            <div class="form-group">
+                <label for="BT">Temperatura Corporal </label>
+                <input type="number" name="BT" id="BT" class="formControl" min="0"
+                placeholder="Ingrese la temperatura corporal del paciente" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
